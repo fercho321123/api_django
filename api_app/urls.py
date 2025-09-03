@@ -30,7 +30,7 @@ urlpatterns = [
 
     path('personas/filtro/', PersonaByDocumentoList.as_view(), name='persona-filtro'),
 
-
+#tareas y personas
     path('tareas/', TareaListCreate.as_view(), name='tareas-list-create'),
     path('tareas/<int:pk>/', TareaRetrieveUpdateDestroy.as_view(), name='tareas-detail'),
     path('personas/filtro/', PersonaByDocumentoList.as_view(), name='persona-filtro'),
