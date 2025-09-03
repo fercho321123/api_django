@@ -13,15 +13,15 @@ from .views import (
 )
 
 urlpatterns = [
-    # CRUD Personas
+    # CRUD_Persona
     path("personas/", PersonaListCreateView.as_view(), name="persona-list-create"),
     path("personas/<int:pk>/", PersonaDetailView.as_view(), name="persona-detail"),
     path("personas/documento/<str:documento>/", PersonaByDocumentoList.as_view(), name="persona-por-documento"),
 
-    # CRUD Tareas
+    # CRUD Tarea
     path("tareas/<int:pk>/", TareaDetailView.as_view(), name="tarea-detail"),
 
-    # Filtros de Tareas
+    # Filtros de Tarea
     path("tareas/fecha/<str:fecha_limite>/", TareaByFechaList.as_view(), name="tareas-por-fecha"),
     path('tareas/rango/<str:fecha_inicio>/<str:fecha_fin>/', TareasPorRangoList.as_view(), name='tareas-por-rango'),
     path("tareas/persona/<str:tipo_doc>/<str:documento>/", TareasPorPersonaList.as_view(), name="tareas-por-persona"),

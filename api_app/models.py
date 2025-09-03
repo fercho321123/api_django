@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.html import MAX_URL_LENGTH
 from django.db import models
 
-
+#persona
 class Persona(models.Model):
     id_persona = models.AutoField(primary_key=True ,editable=False, db_column='T001IdPersona')
     nombre = models.CharField(  max_length=100, db_column='t001Nombre')
@@ -19,7 +19,7 @@ class Persona(models.Model):
         verbose_name = 'Persona'
         verbose_name_plural = 'Personas'
 
-
+#tarea
 class Tarea(models.Model):
     persona = models.ForeignKey('Persona', on_delete=models.CASCADE)
     titulo = models.CharField(max_length=100)

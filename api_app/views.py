@@ -10,7 +10,7 @@ from django.utils.dateparse import parse_date
 from django.db import models
 
 
-
+#vistas
 
 #tareas
 class TareaListCreate(generics.ListCreateAPIView):
@@ -20,8 +20,7 @@ class TareaListCreate(generics.ListCreateAPIView):
 class TareaRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tarea.objects.all()
     serializer_class = TareaSerializer
-#_______________________________________________________
-    
+#_________________________________
 class PersonaByDocumentoList(generics.ListAPIView):
     serializer_class = PersonaSerializer
 
@@ -30,7 +29,7 @@ class PersonaByDocumentoList(generics.ListAPIView):
         return Persona.objects.filter(documento=documento)
 # ------------------ PERSONAS ------------------
 
-# ----------------- CRUD Personas -----------------
+# --------- CRUD Personas ------------
 class PersonaListCreateView(generics.ListCreateAPIView):
     queryset = Persona.objects.all()
     serializer_class = PersonaSerializer
@@ -44,7 +43,7 @@ class PersonaPorDocumentoView(generics.RetrieveAPIView):
     lookup_field = "documento"
     queryset = Persona.objects.all()
 
-# ----------------- CRUD Tareas -----------------
+# ------------ CRUD Tareas -----------
 class TareaListCreateView(generics.ListCreateAPIView):
     queryset = Tarea.objects.all()
     serializer_class = TareaSerializer
