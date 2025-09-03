@@ -6,7 +6,6 @@ class PersonaSerializer(serializers.ModelSerializer):
       model=Persona 
       fields ='__all__'
 
-
 class TareaSerializer(serializers.ModelSerializer):
  class Meta:
   model = Tarea

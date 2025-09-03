@@ -20,8 +20,7 @@ class TareaListCreate(generics.ListCreateAPIView):
 class TareaRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Tarea.objects.all()
     serializer_class = TareaSerializer
-#_______________________________________________________
-    
+#_________________________________
 class PersonaByDocumentoList(generics.ListAPIView):
     serializer_class = PersonaSerializer
 

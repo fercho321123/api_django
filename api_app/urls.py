@@ -13,7 +13,7 @@ from .views import (
 )
 
 urlpatterns = [
-    # CRUD Persona
+    # CRUD_Persona
     path("personas/", PersonaListCreateView.as_view(), name="persona-list-create"),
     path("personas/<int:pk>/", PersonaDetailView.as_view(), name="persona-detail"),
     path("personas/documento/<str:documento>/", PersonaByDocumentoList.as_view(), name="persona-por-documento"),
