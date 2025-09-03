@@ -24,7 +24,7 @@ def home(request):
     return HttpResponse("Bienvenido a la API")
 
 urlpatterns = [
-    path('', home),  # ruta raíz
+    path('', home),  
     path('admin/', admin.site.urls),
     path('api/', include('api_app.urls')),
 ]
